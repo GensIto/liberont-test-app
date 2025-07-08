@@ -1,5 +1,17 @@
 # 開発環境構築
 
+## 初回 / .envが更新された時
+
+```
+cp .env.example .env
+```
+
+### install
+
+```
+npm install
+```
+
 ## db
 
 table の更新がしたいときは、`src/db/schema.ts`を更新してください
