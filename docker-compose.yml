@@ -1,0 +1,18 @@
+version: "3.9"
+services:
+  db:
+    image: mysql:8.4
+    container_name: liberont-test-app-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpass
+      MYSQL_DATABASE: liberont_test_app_db
+      MYSQL_USER: gens
+      MYSQL_PASSWORD: genspass
+    ports:
+      - "3306:3306"
+    volumes:
+      - db-data:/var/lib/mysql
+
+volumes:
+  db-data:
