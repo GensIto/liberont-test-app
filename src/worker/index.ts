@@ -1,12 +1,18 @@
 import { zValidator } from "@hono/zod-validator";
+import { serve } from "@hono/node-server";
 import { Hono } from "hono";
 import z from "zod";
+import { db } from "@/db/index";
+import { productsTable } from "@/db/schema";
 
-const app = new Hono<{ Bindings: Env }>().basePath("/api");
+const app = new Hono().basePath("/api");
 
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const routes = app
-  .get("/", (c) => c.json({ name: "Cloudflare" }))
+  .get("/products", async (c) => {
+    const products = await db.select().from(productsTable);
+    return c.json({ products });
+  })
   .post(
     "/",
     zValidator(
@@ -20,4 +26,12 @@ const routes = app
 
 export type AppType = typeof routes;
 
-export default app;
+serve(
+  {
+    fetch: app.fetch,
+    port: 3000,
+  },
+  (info) => {
+    console.log(`Server is running on http://localhost:${info.port}`);
+  }
+);
