@@ -1,22 +1,47 @@
-## 開発環境構築
+# Liberont Test App
 
-`node --version`
-v22.15.1
-`npm --version`
-11.4.0
+ECサイトのカート機能を実装したReact + Hono + Cloudflare Workers アプリケーションです。
 
-## 本番環境
+## プロジェクト概要
 
-https://liberont-test-app.gensito1121.workers.dev
+このプロジェクトは、以下の技術スタックを使用したECサイトのプロトタイプです：
+- **フロントエンド**: React 19, TanStack Router, Tailwind CSS
+- **バックエンド**: Hono (Cloudflare Workers)
+- **データベース**: Drizzle ORM + D1 Database
+- **UI ライブラリ**: shadcn/ui
+- **状態管理**: Zustand
 
-## 初回
+## 必要なソフトウェア
 
-```
+- Node.js v22.15.1以上
+- npm 11.4.0以上
+
+## 環境構築と実行手順
+
+### 1. 初期設定
+
+```bash
+# リポジトリをクローン
+git clone https://github.com/GensIto/liberont-test-app.git
+cd liberont-test-app
+
+# 環境設定ファイルをコピー
 cp .env.example .env
 cp wrangler.example.json wrangler.json
+
+# 依存関係をインストール
 npm install
+```
+
+### 2. 開発サーバーの起動
+
+```bash
 npm run dev
 ```
+
+### 3. 本番環境
+
+デプロイ済みアプリケーション: https://liberont-test-app.gensito1121.workers.dev
 
 ## db
 
