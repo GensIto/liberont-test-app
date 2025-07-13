@@ -1,0 +1,1 @@
+ALTER TABLE `cart_items_table` ADD `quantity` integer DEFAULT 1 NOT NULL;

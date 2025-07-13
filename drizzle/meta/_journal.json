@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1752294951926,
+      "tag": "0000_reflective_obadiah_stane",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1752295067987,
+      "tag": "0001_mighty_warstar",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1752295510341,
+      "tag": "0002_solid_bushwacker",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1752296497693,
+      "tag": "0003_absurd_drax",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1752327050391,
+      "tag": "0004_optimal_orphan",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "6",
+      "when": 1752408848238,
+      "tag": "0005_reflective_charles_xavier",
+      "breakpoints": true
+    }
+  ]
+}
