@@ -18,12 +18,6 @@ npm install
 npm run dev
 ```
 
-### install
-
-```
-npm install
-```
-
 ## db
 
 table の更新がしたいときは、`src/db/schema.ts`を更新してください
